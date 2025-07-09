@@ -1,0 +1,15 @@
+{
+    "name": "ndeye-oumy-ndiaye/maxitsa",
+    "autoload": {
+        "psr-4": {
+            "NdeyeOumyNdiaye\\Maxitsa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ndeye Oumy Ndiaye",
+            "email": "tonemail@example.com"
+        }
+    ],
+    "require": {}
+}
