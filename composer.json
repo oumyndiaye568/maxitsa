@@ -2,12 +2,12 @@
     "name": "ndeye-oumy-ndiaye/maxitsa",
     "autoload": {
         "psr-4": {
-            "NdeyeOumyNdiaye\\Maxitsa\\": "src/",
             "App\\Core\\":"app/core",
             "App\\Controllers\\":"src/controller",
             "App\\Core\\Abstract\\":"app/core/abstract",
-            "App\\Entities\\":"src/entity"
-
+            "App\\Entities\\":"src/entity",
+            "App\\Repositorie\\": "src/repositorie",
+            "App\\Service\\":"src/service"
         }
     },
     "authors": [
@@ -16,5 +16,7 @@
             "email": "tonemail@example.com"
         }
     ],
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
 }

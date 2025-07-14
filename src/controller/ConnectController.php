@@ -1,6 +1,8 @@
 <?php
 namespace App\Controllers;
 use App\service\SecurityService;
+use  App\Core\Abstract\AbstractController;
+
 class ConnectController extends AbstractController {
 
     public function __construct (){

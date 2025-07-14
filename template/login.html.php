@@ -1,5 +1,4 @@
-
-    <div class="geometric-bg w-full max-w-md rounded-3xl shadow-2xl relative">
+<div class="geometric-bg w-full max-w-md rounded-3xl shadow-2xl relative">
         <div class="geometric-shapes">
             <div class="shape shape-1"></div>
             <div class="shape shape-2"></div>
@@ -21,7 +20,7 @@
             </div>  -->
             
             <!-- Login Form -->
-            <form   method="post" action="/show" class="space-y-10" >
+            <form method="post" action="/" class="space-y-10">
                 <!-- Username Field -->
                 <div class="relative">
                     <div class="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
@@ -32,6 +31,10 @@
                         </div>
                     </div>
                 </div>
+
+                <?php if (!empty($error)): ?>
+    <div class="text-red-500 text-center mb-4"><?= htmlspecialchars($error) ?></div>
+            <?php endif; ?>
                 <!-- Password Field -->
                 <div class="relative">
                     <div class="absolute left-4 top-1/2 transform -translate-y-1/2 z-10">
@@ -43,7 +46,8 @@
                         </div>
                     </div>
                     <input 
-                        type="password" 
+                        type="text" 
+                        name="numerotelephone"
                         placeholder="NUMERO-TELEPHONE" 
                         class="input-field w-full pl-16 pr-4 py-4 rounded-2xl text-black placeholder-gray-500 outline-none"
                     />
@@ -59,6 +63,7 @@
                     </div>
                     <input 
                         type="password" 
+                        name="password" 
                         placeholder="PASSWORD" 
                         class="input-field w-full pl-16 pr-4 py-4 rounded-2xl text-black placeholder-gray-500 outline-none"
                     />
@@ -101,3 +106,5 @@
             </button>
         </div>
     </div>
+
+

@@ -1,26 +1,18 @@
 <?php
 namespace App\Service;
-use App\Repositorie\ConnectRepository;
-
-
-
+use App\Repositorie\ConnectRepositorie; 
 class SecurityService{
-    private ConnectRepository $ConnectRepository;
-    
-
-
+    private ConnectRepositorie $User;
     public function __construct ()
-      {
-       
-        $this->ConnectRepository = new ConnectRepository();
-    }
-    public function getAll()
     {
-        return $this->ConnectRepository->selectAll();
+        // var_dump('ok');
+        // die;
+        $this->User = new ConnectRepositorie();
     }
-    public function seconnecter ($login ,$password){
-        return $this->ConnectRepository->selectByLoginAndPassword( $numerotelephone,  $password);
+    public function login  ( string $numerotelephone ,string $password )
+    { 
+        return $this->User->SelectByNumerotelephoneAndPassword ($numerotelephone ,$password);
+
     }
-        
-    
-}
+
+}       

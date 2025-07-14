@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Core;
 
 class Router
@@ -25,6 +26,8 @@ class Router
                     }
                 }
             }
+
+        
         if (class_exists($controllerName) && method_exists($controllerName, $actionName)) {
             $controller = new $controllerName();
             $controller->$actionName();
